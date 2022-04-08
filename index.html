@@ -18,21 +18,26 @@
 </head>
 
 <body>
-    <aside>
-        <section>
-            <h1>
-                <a href="#">C. S. Lewis</a>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#home">C. S. Lewis</a>
             </h1>
-        </section>
-        <nav>
-            <ul>
-                <li><a href="#">Biografia</a></li>
-                <li><a href="#">Obras</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#biografia">Biografia</a></li>
+                    <li><a href="#obras">Obras</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+        </div>
         </nav>
     </aside>
+
+    <div class="menu-spacing"></div>
 
     <section id="home" class="intro main-bg section">
         <div class="main-content intro-content">
@@ -52,7 +57,7 @@
 
     <section id="biografia" class="white-bg section">
         <div class="main-content bio-content">
-            <h2>Biografia</h2>
+            <h3>Biografia</h3>
             <p>
                 C.S. Lewis nasceu em 1898 em Belfast, na Irlanda. Educado inicialmente por sua mãe e por uma governanta,
                 passava a maior parte do tempo na biblioteca da família dedicado à leitura de livros clássicos. Lewis
@@ -75,7 +80,7 @@
 
     <section id="obras" class="grid-one main-bg section">
         <div class="main-content grid-one-content">
-            <h2 class="grid-main-heading">Obras</h2>
+            <h3 class="grid-main-heading">Obras</h3>
             <p class="grid-description">Principais livros do autor.</p>
 
             <div class="grid">
@@ -109,9 +114,9 @@
             </div>
         </div>
     </section>
-    <section id="gallery" class="grid-one white-bg section">
+    <section id="galeria" class="grid-one white-bg section">
         <div class="main-content grid-one-content">
-            <h2 class="grid-main-heading">Galeria</h2>
+            <h3 class="grid-main-heading">Galeria</h3>
             <p class="grid-description">Algumas fotos do C. S. Lewis</p>
 
             <div class="grid">
@@ -136,10 +141,10 @@
             </div>
     </section>
 
-    <section id="contact" class="intro main-bg section">
+    <section id="contato" class="intro main-bg section">
         <div class="main-content intro-content">
             <div class="intro-text-content">
-                <h2>Deixe sua mensagem!</h2>
+                <h3>Deixe sua mensagem!</h3>
                 <p>Em que podemos melhorar? Deem dicas!</p>
             </div>
             <div class="intro-img">
@@ -147,7 +152,7 @@
             </div>
             <div class="contact-form">
                 <fieldset class="form-grid">
-                    <legend>Contact me</legend>
+                    <legend>Contate-nos</legend>
 
                     <div class="form-group">
                         <label for="first-name">Nome</label>
@@ -166,7 +171,8 @@
 
                     <div class="form-group full-width">
                         <label for="message">Mensagem</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Deixe aqui sua mensagem."></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="Deixe aqui sua mensagem."></textarea>
                     </div>
 
                     <div class="form-group full-width">
